@@ -18,6 +18,7 @@
 		<ul>
 			<li th:each="file : ${files}">
 				<a th:href="${file}" th:text="${file}" />
+				<div th:if="${linktai}"><a th:href="${linktai}" th:text="${linktai}"  /></div>
 			</li>
 		</ul>
 	</div>
