@@ -8,6 +8,7 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'application'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
@@ -22,11 +23,19 @@ repositories {
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
-
+mainClassName = 'Quickstart'
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+version = '1.0'
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-devtools")
     compile("org.springframework.boot:spring-boot-configuration-processor")
     testCompile("org.springframework.boot:spring-boot-starter-test")
+    
+    compile 'com.google.api-client:google-api-client:1.22.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.22.0'
+    compile 'com.google.apis:google-api-services-drive:v3-rev61-1.22.0'
+    
 }
 
